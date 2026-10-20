@@ -1,0 +1,23 @@
+Job Title: Senior Python Developer (NLP Engineering)
+
+SUMMARY
+We need a senior Python engineer to lead our NLP engineering initiatives.
+You will architect scalable pipelines, build transformers models, and work with production ML systems.
+
+CORE RESPONSIBILITIES
+• Build MLOps pipelines for text classification, sequence labeling and language modeling tasks.
+• Design feature stores and vector databases for semantic search services at scale.
+• Train and deploy large language models (LLMs) using PyTorch, Hugging Face, vLLM or TGI.
+• Optimize inference latency with ONNX, TensorRT or TorchScript.
+• Use fastAPI to expose REST APIs; containerize with Docker/ Kubernetes for CI/CD.
+
+REQUIRED SKILLS
+- Python 3.10+ (typing, async/await, type hints).
+- Frameworks: scikit-learn, pandas, numpy.
+- NLP: tokenization, attention mechanisms, transformers, LLM inference, RAG pipelines.
+- Vector search: FAISS or Pinecone integration.
+
+DESIRABLE EXPERIENCE
+- MLOps practice (MLflow, Weights & Biases).
+- Experience with Hugging Face pipelines.
+- Cloud platforms: AWS SageMaker, GCP Vertex AI, or Azure ML.

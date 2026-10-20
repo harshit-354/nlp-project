@@ -1,0 +1,22 @@
+Job Title: NLP Content Strategist - AI Text Assistant
+
+ROLE OVERVIEW
+We need an NLP content strategist to craft engaging text prompts for our AI writing assistant. You'll write sample dialogues, create training data samples, and test conversational flows for natural language processing models.
+
+RESPONSIBILITIES
+- Write short-form articles and blog posts about emerging NLP technologies.
+- Develop prompt engineering examples for LLM fine-tuning tasks.
+- Analyze customer queries and suggest topic clusters with semantic search models.
+- Create FAQ content using RAG (retrieval-augmented generation) patterns.
+
+REQUIRED EXPERIENCE
+- 2+ years in NLP product, technical writing, or content operations.
+- Strong command of English grammar and style.
+- Familiarity with transformer-based text generation systems.
+- Basic knowledge of tokenization limits and model context windows.
+
+TECHNICAL SKILLS
+- Prompt design for instruction-tuned LLMs (Llama, Mistral, etc.)
+- Text summarization techniques (extractive vs abstractive)
+- Named entity recognition patterns in documentation
+- Semantic segmentation for text classification tasks

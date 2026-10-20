@@ -1,0 +1,35 @@
+# Alex Rivera - Data Engineer Profile
+
+**Contact:** alex.rivera@example.com | **GitHub:** github.com/ar-data-wizard
+
+## SUMMARY
+Data engineer specializing in building robust ML pipelines for text analytics workloads. Strong background in ETL, data warehousing, and NLP feature engineering at scale.
+
+## SKILL MATRIX
+
+| Domain         | Skills |
+|----------------|--------|
+| Languages      | Python, Scala, SQL |
+| Data Processing| Apache Spark, PySpark, Databricks |
+| MLOps Tools    | Airflow, MLflow, Kubeflow |
+| Vector DBs     | Pinecone, Qdrant, Milvus |
+| Cloud          | AWS (S3, Glue, Lambda), GCP (BigQuery) |
+
+## PROFESSIONAL EXPERIENCE
+
+### Machine Learning Data Pipeline Engineer
+*StreamData Inc* | Seattle, WA | 2020-Present
+- Built ETL pipelines to process millions of documents daily for semantic search.
+- Set up feature stores using Feast and deployed models with TorchServe.
+- Implemented distributed tokenization with Ray to scale preprocessing.
+
+### Data Engineer Intern
+*QuickSearch Corp* | Austin, TX | 2019-2020
+- Developed data pipelines for web scraping and NER model training.
+- Built Spark job to cluster news articles by topic using LDA.
+
+## PROJECTS
+
+**Real-time News Aggregator**
+- Scraped news sources, tokenized text with spaCy, stored in TimescaleDB.
+- Built a recommendation system with TF-IDF vectors.
