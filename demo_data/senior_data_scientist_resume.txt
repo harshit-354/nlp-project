@@ -1,0 +1,123 @@
+SARAH MITCHELL
+Contact: sarah.mitchell@email.com | www.linkedin.com/in/sarah-mitchell-ml
+GitHub: github.com/sarahmitchell-ai
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+
+Senior Data Scientist with 7+ years of experience in designing, developing, and 
+deploying machine learning solutions for enterprise clients. Expertise in predictive 
+analytics, natural language processing, computer vision, and MLOps. Proven track 
+record of translating complex business problems into innovative AI/ML solutions 
+that drive measurable ROI. Published researcher with 12+ journal papers and active 
+open-source contributor to scikit-learn and PyTorch projects.
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+
+Programming Languages: Python (advanced), SQL, R, Scala, JavaScript
+
+Machine Learning Frameworks: Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost, 
+                            LightGBM, CatBoost, Vowpal Wabbit
+
+Deep Learning Libraries: PyTorch Lightning, Hugging Face Transformers, spaCy, 
+                         NLTK, Gensim, Fairseq, BERTopic, Sentence-Transformers
+
+Big Data Technologies: Apache Spark (PySpark), Kafka, Hadoop Ecosphere
+
+Data Processing: Pandas, NumPy, Dask, Polars, Vaex
+
+Visualization & BI: Matplotlib, Seaborn, Plotly, Bokeh, Streamlit, Tableau, 
+                    PowerBI, Looker, Superset
+
+Cloud Platforms: AWS (SageMaker, S3, EC2, Lambda, CloudWatch), GCP (Vertex AI, 
+                  BigQuery, Dataflow), Azure ML, Databricks, Snowflake
+
+DevOps & MLOps: Docker, Kubernetes, MLflow, Kubeflow, Weights & Biases, 
+                 AWS CodePipeline, Jenkins, GitHub Actions, Terraform, Ansible
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+SENIOR DATA SCIENTIST - FinTech Analytics Corp | San Francisco, CA
+January 2023 - Present
+
+- Architected and deployed real-time fraud detection system using PyTorch 
+  and anomaly detection algorithms (Isolation Forest, Autoencoders), reducing 
+false positives by 45% and saving $2.3M annually
+  
+- Led end-to-end development of customer churn prediction model achieving 
+  89% AUC-ROC using ensemble methods (XGBoost + LightGBM + CatBoost); model 
+deployed via Flask REST API behind Nginx with rate limiting
+  
+- Implemented personalized recommendation engine for financial products using 
+two-tensor factorization and collaborative filtering, increasing cross-sell 
+conversion by 23%
+
+- Built NLP pipeline for sentiment analysis of social media mentions and 
+customer support tickets; deployed BERT-based classifier achieving 94% F1-score
+in production on AWS SageMaker
+
+SENIOR MACHINE LEARNING ENGINEER - CloudVision Systems | Seattle, WA
+June 2020 - December 2022
+
+- Designed computer vision solution for quality control using YOLOv5 and OpenCV, 
+detecting manufacturing defects with 97.8% precision and 96.1% recall
+   
+- Implemented feature store architecture using Feast for serving ML models in 
+real-time predictions across microservices (gRPC/REST)
+
+- Built end-to-end MLOps platform monitoring model drift and performance degradation
+using Evidently AI and WhyLabs; automated retraining pipelines with Airflow
+  
+- Optimized model inference latency by developing ONNX runtime deployments, reducing 
+latency from 250ms to 45ms on production workloads
+
+DATA SCIENTIST - HealthTech Innovations | Boston, MA
+March 2018 - May 2020
+
+- Developed patient risk stratification models for hospital readmission prediction
+using Gradient Boosted Trees (CatBoost), integrated with Epic EHR system
+  
+- Created predictive analytics dashboard in Streamlit/Tableau showing model performance,
+feature importance, and data quality metrics for clinical teams
+
+- Conducted A/B tests on treatment recommendation systems using causal inference 
+methods (Propensity Score Matching); increased hospital revenue by 12%
+
+================================================================================
+EDUCATION
+================================================================================
+
+MASTERS IN COMPUTATIONAL SCIENCE AND MACHINE LEARNING
+University of California, Berkeley | 2016 - 2018
+Thesis: "Neural Network Architectures for Time Series Anomaly Detection" (Published in NeurIPS Workshop)
+
+BACHELOR OF SCIENCE IN STATISTICS AND COMPUTER SCIENCE
+Massachusetts Institute of Technology | 2014 - 2016
+GPA: 3.8/4.0 Minor in Mathematics
+
+================================================================================
+PUBLICATIONS & OPEN SOURCE
+================================================================================
+
+PUBLISHED PAPERS:
+- "Attention-Based Transformers for Multivariate Sensor Data" | IEEE ICASSP 2023 (Top 15% acceptance)
+- "Efficient Knowledge Distillation for Edge Devices with Model Quantization" | NeurIPS Workshop 2022
+
+OPEN SOURCE CONTRIBUTIONS:
+- Reviewer for ML JOURNALS (NeurIPS, ICML, ICLR, KDD)
+- Contributed to PyTorch Lightning: PRs merged fixing CUDA memory leaks
+- Maintainer of small Python package: "fair_metrics" (pip install fair_metrics)
+
+================================================================================
+CERTIFICATIONS & TRAINING
+================================================================================
+
+- AWS Certified Machine Learning – Specialty
+- Google Cloud Professional ML Engineer 
+- Databricks Certified Machine Learning Professional
+- DeepLearning.AI TensorFlow Developer Certificate

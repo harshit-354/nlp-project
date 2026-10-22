@@ -1,7 +1,7 @@
-streamlit>=1.30
-nltk>=3.8
-scikit-learn>=1.3
-PyPDF2>=3.0
-# Bonus (semantic score). Large download (pulls in PyTorch); the app still
-# runs without it — only the semantic toggle needs it.
-sentence-transformers>=2.2
+# Core offline analysis and frontend. Python 3.10+ recommended.
+streamlit>=1.40,<2
+scikit-learn>=1.5,<2
+pypdf>=5,<7
+# Compatibility with the original app.py until the frontend branch is integrated.
+nltk>=3.8,<4
+PyPDF2>=3,<4

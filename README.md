@@ -1,64 +1,84 @@
-# Resume–Job Description Matcher
+# Resume–Job Description Matcher (NLP Coursework Project)
 
-A small NLP project that compares a resume with a job description. It shows:
+**Live demo:** [Open the Streamlit app](https://nlp-project-gjwzmcdivpkazqvsxeathz.streamlit.app/)
 
-1. **Match score (0–100%)**: TF-IDF vectors + cosine similarity
-2. **Matched keywords**: important JD terms that are also in the resume
-3. **Missing keywords**: important JD terms the resume doesn't mention
-4. *(Optional)* **Semantic score**: sentence embeddings (`all-MiniLM-L6-v2`), so you can compare word overlap with meaning overlap
+A production-grade NLP matching dashboard comparing candidate resumes with job descriptions using a multi-paradigm approach:
 
-## Project structure
+1. **Overall Compatibility Score**: Composite metric balancing lexical, semantic, and skill coverage metrics.
+2. **Lexical Match (TF-IDF + Cosine)**: Exact unigram vocabulary overlap.
+3. **Semantic Match (Sentence Transformers)**: Dense 384-dimensional embeddings (`all-MiniLM-L6-v2`) capturing conceptual relevance and synonyms.
+4. **Skill Coverage Audit**: Line-level TF-IDF keyword extraction categorizing skills into Matched and Missing colored tags.
+5. **Actionable Improvement Recommendations**: Contextual resume enhancement advice.
+6. **Viva Demonstration Deep-Dive**: Live inspection of text across all 6 preprocessing stages, TF-IDF matrix geometry, and mathematical derivations.
+
+## Project Structure
 
 ```
-app.py                     # Whole app: NLP pipeline + Streamlit UI
-requirements.txt
-samples/resume.txt         # Sample resume to test with
-samples/job_description.txt
-VIVA_CHEAT_SHEET.md        # 5 key concepts to explain
+├── .streamlit/
+│   └── config.toml             # Custom modern dark theme configuration
+├── analysis_api.py             # Root NLP backend API (contract: analyze_resume)
+├── app.py                      # Streamlit frontend dashboard & pipeline controller
+├── requirements.txt            # Project dependencies
+├── smoke_check.py              # Automated verification & contract smoke check
+├── samples/
+│   ├── resume.txt              # Sample junior NLP engineer resume
+│   └── job_description.txt    # Target junior NLP engineer job description
+├── demo_data/
+│   └── senior_data_scientist_resume.txt  # Comparison senior resume
+└── VIVA_CHEAT_SHEET.md         # Key concepts, viva questions & limitations
 ```
 
-## Setup
+## Setup & Installation
 
 Requires Python 3.10+.
 
 ```bash
+# 1. Create and activate a virtual environment
 python3 -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+# 2. Install dependencies
 pip install -r requirements.txt
 ```
 
-`sentence-transformers` is only needed for the optional semantic score. It also
-installs PyTorch, which is a large download. If you skip it, everything else
-still works.
+On first launch, required NLTK corpora (`punkt`, `stopwords`, `wordnet`) are downloaded automatically.
 
-On first run, the app downloads the NLTK data it needs (punkt, stopwords,
-wordnet). This happens automatically.
-
-## Run
+## Running the Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-Then open http://localhost:8501 and:
+Then navigate to `http://localhost:8501`:
+1. Use the **⚡ Quick Demo** selector in the sidebar to load candidate samples in one click, or upload custom `.pdf` / `.txt` files.
+2. Click **🚀 Analyze Resume Match**.
+3. Inspect the circular compatibility gauge, metric scorecards, Altair visual analytics charts, and filterable skill chips.
+4. Download structured reports in **JSON** or **Markdown** formats.
+5. Open the **🔬 Deep-Dive: NLP Pipeline Architecture & Viva Concepts** expander for demonstration walkthroughs.
 
-1. Paste the resume and JD, or upload them as `.txt`/`.pdf`. The files in `samples/` work well.
-2. *(Optional)* Turn on the semantic score toggle.
-3. Click **Analyze**.
-4. Open **"How it works"** to see the tokens after each preprocessing stage.
+## Backend Contract (`analysis_api.py`)
 
-## The NLP pipeline (in `app.py`)
+The root-level `analysis_api.py` exposes:
 
-| Step | Function | What it does |
-|------|----------|--------------|
-| 1 | `preprocess(text)` | lowercase → remove punctuation/numbers → tokenize → remove stopwords → lemmatize → remove domain stopwords |
-| 2 | `vectorize(resume, jd)` | TF-IDF vectors for both documents (scikit-learn) |
-| 3 | `similarity(vec1, vec2)` | cosine similarity × 100 |
-| 4 | `keyword_gap(resume, jd)` | top TF-IDF terms of the JD → split into matched / missing |
-| ★ | `semantic_similarity(...)` | cosine similarity of sentence embeddings |
+```python
+analyze_resume(resume_text: str, job_description: str) -> dict
+```
 
-**Note on `keyword_gap`:** JD keywords are ranked with TF-IDF computed across
-the lines of the JD itself, not across the resume and JD together. With only
-two documents, IDF lowers the weight of every word that appears in both. That
-would push skills the candidate *already has* to the bottom, so they would
-never show up as "matched".
+### Response Schema:
+| Key | Type | Description |
+|---|---|---|
+| `overall_score` | `float` (0–100) | Weighted composite compatibility score |
+| `tfidf_score` | `float` (0–100) | Lexical cosine similarity percentage |
+| `semantic_score` | `float` (0–100) / `None` | Dense sentence embedding similarity |
+| `skill_score` | `float` (0–100) | Ratio of matched top job keywords |
+| `matched_skills` | `list[str]` | Keywords present in both resume and JD |
+| `missing_skills` | `list[str]` | Top JD keywords missing from the resume |
+| `suggestions` | `list[str]` | Actionable improvement recommendations |
+
+## Automated Smoke Check
+
+Verify system integrity and backend contract compliance with:
+
+```bash
+python smoke_check.py
+```

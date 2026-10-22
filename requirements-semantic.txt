@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional; download/cache the model explicitly before enabling semantic inference.
+sentence-transformers>=3,<6
